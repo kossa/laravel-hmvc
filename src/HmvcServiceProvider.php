@@ -48,7 +48,7 @@ class HmvcServiceProvider extends ServiceProvider {
      */
     protected function registerHmvc()
     {
-        $this->app['hmvc'] = $this->app->share(function($app)
+        $this->app->singleton('hmvc', function($app)
         {
             $config = [];
 
